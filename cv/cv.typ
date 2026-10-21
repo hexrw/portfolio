@@ -8,11 +8,9 @@
   en: (experience: "Experience", ventures: "Ventures", projects: "Selected projects", skills: "Skills", languages: "Languages", now: "now"),
   cs: (experience: "Zkušenosti", ventures: "Vlastní firmy", projects: "Vybrané projekty", skills: "Dovednosti", languages: "Jazyky", now: "dosud"),
 ).at(lang)
-#let months = (
-  en: ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"),
-  cs: ("led", "úno", "bře", "dub", "kvě", "čvn", "čvc", "srp", "zář", "říj", "lis", "pro"),
-).at(lang)
-#let ym(s) = months.at(int(s.slice(5, 7)) - 1) + " " + s.slice(0, 4)
+#let months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+// Czech uses 10/2025 like the site; English uses Oct 2025.
+#let ym(s) = if lang == "cs" { str(int(s.slice(5, 7))) + "/" + s.slice(0, 4) } else { months.at(int(s.slice(5, 7)) - 1) + " " + s.slice(0, 4) }
 #let span(e) = ym(e.start) + " – " + if e.end == none { labels.now } else { ym(e.end) }
 #let bare(url) = url.replace(regex("^https://(www\.)?"), "")
 
@@ -24,6 +22,7 @@
 #set page(paper: "a4", margin: (x: 18mm, y: 16mm))
 #set text(font: "Source Serif 4", size: 10.5pt, fill: ink, lang: lang, hyphenate: false)
 #set par(leading: 0.6em, spacing: 1em)
+#show regex("[eE]-commerce"): it => box(it)
 
 #let display(body, size: 10pt, fill: ink) = text(font: "Libre Franklin", weight: 700, size: size, fill: fill, body)
 #let section(title) = {
