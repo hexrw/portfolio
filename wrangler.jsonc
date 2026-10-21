@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hexrw-portfolio",
+  "account_id": "62a145acbf46062b9978a9f21ca433f4",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./dist" },
+  "workers_dev": true
+}

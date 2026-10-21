@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+.taste-skill/
+public/cv-*.pdf
+.DS_Store

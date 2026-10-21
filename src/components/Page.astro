@@ -1,0 +1,227 @@
+---
+import '@fontsource-variable/libre-franklin';
+import '@fontsource-variable/source-serif-4';
+import '../styles/site.css';
+import { profile as p, t, range, year, type Lang } from '../data/profile';
+import { ui } from '../data/ui';
+
+const { lang } = Astro.props as { lang: Lang };
+const u = ui[lang];
+const b = p.basics;
+const other: Lang = lang === 'en' ? 'cs' : 'en';
+const home = lang === 'en' ? '/' : '/cs/';
+const url = (path: string) => new URL(path, b.website).href;
+let n = 0;
+const about = t(b.about, lang).replace(/==(.+?)==/g, (_, m) => `<mark class="hl hl-${(n++ % 3) + 1}">${m}</mark>`);
+const preview = p.projects.find((x) => x.image);
+const mail = `mailto:${b.email}`;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{b.name} · {t(b.title, lang)}</title>
+    <meta name="description" content={t(b.summary, lang)} />
+    <link rel="canonical" href={url(home)} />
+    <link rel="alternate" hreflang="en" href={url('/')} />
+    <link rel="alternate" hreflang="cs" href={url('/cs/')} />
+    <link rel="alternate" hreflang="x-default" href={url('/')} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={`${b.name} · ${t(b.title, lang)}`} />
+    <meta property="og:description" content={t(b.summary, lang)} />
+    <meta property="og:url" content={url(home)} />
+    <meta property="og:image" content={url(b.photo)} />
+    <meta name="theme-color" content="#e5e1d8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1c1511" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script is:inline>if ('IntersectionObserver' in window) document.documentElement.classList.add('js');</script>
+  </head>
+  <body>
+    <a class="skip" href="#about">{u.nav.about}</a>
+
+    <header class="hero" id="top">
+      <div class="hero-top wrap">
+        <a class="wordmark" href={home}>{b.handle}</a>
+        <nav class="top-links" aria-label={u.menu}>
+          <a href="#experience">{u.nav.experience}</a>
+          <a href="#projects">{u.nav.projects}</a>
+          <a href="#contact">{u.nav.contact}</a>
+          <a href={u.otherLang.href} hreflang={other} lang={other}>{u.otherLang.label}</a>
+        </nav>
+      </div>
+      <div class="hero-copy wrap reveal">
+        <h1>{b.name}</h1>
+        <p class="role">{t(b.title, lang)}</p>
+        <p class="lead">{t(b.lead, lang)}</p>
+        <a class="btn" href={u.cvFile} download>{u.cv} <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="giant" aria-hidden="true">{b.name.split(' ').at(-1)}</p>
+    </header>
+
+    <main>
+      <section class="about wrap reveal" id="about" aria-labelledby="about-h">
+        <h2 id="about-h">{u.about}</h2>
+        <div class="about-body">
+          <div class="about-text">
+            <p><strong>{b.name}.</strong> <Fragment set:html={about} /></p>
+            <p><a class="hl hl-cta" href="#contact">{u.aboutCta}</a></p>
+          </div>
+          <img class="portrait" src={b.photo} alt={b.name} width="512" height="512" loading="lazy" />
+        </div>
+      </section>
+
+      <section class="exp" id="experience" aria-labelledby="exp-h">
+        <div class="wrap reveal">
+          <h2 id="exp-h">{u.experience}</h2>
+          <table class="lineup">
+            <tbody>
+              {p.experience.map((e) => (
+                <tr>
+                  <th scope="row">{t(e.company, lang)}</th>
+                  <td class="role-c">{t(e.role, lang)}</td>
+                  <td class="what">{t(e.what, lang)}</td>
+                  <td class="when">{range(e.start, e.end, lang)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="ventures wrap" id="ventures" aria-labelledby="ven-h">
+        <div class="ven-top reveal">
+          <h2 id="ven-h">{u.ventures}</h2>
+          <p>{u.venturesIntro}</p>
+        </div>
+        <div class="specimens reveal">
+          {p.ventures.map((v) => (
+            <a class="spec" href={v.url}>
+              <span class="spec-word">{v.name}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <div class="shots wrap reveal">
+        {p.ventures.map((v) => (
+          <figure>
+            <a class="frame" href={v.url} tabindex="-1">
+              <img src={v.image} alt={`${v.name}, ${new URL(v.url).host}`} width="1440" height="1000" loading="lazy" />
+            </a>
+            <figcaption><strong>{v.name}.</strong> {t(v.summary, lang)}</figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <section class="projects wrap" id="projects" aria-labelledby="proj-h">
+        <div class="ledger reveal">
+          <h2 id="proj-h">{u.projects}</h2>
+          <h3>{u.openSource}</h3>
+          <ul class="rows">
+            {p.projects.map((x) => (
+              <li class="row" data-img={x.image} data-alt={x.name}>
+                {x.image && <img class="row-img" src={x.image} alt="" width="1200" height="600" loading="lazy" />}
+                <a href={x.url}>
+                  <span class="r-name">{x.name}</span>
+                  <span class="r-kind">{t(x.summary, lang)}</span>
+                  <span class="r-year">{x.year}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <h3>{u.writing}</h3>
+          <ul class="rows">
+            {p.writing.map((w) => (
+              <li class="row" data-img={w.image}>
+                {w.image && <img class="row-img" src={w.image} alt="" width="1024" height="559" loading="lazy" />}
+                <a href={w.url} hreflang="en">
+                  <span class="r-name">{w.title}</span>
+                  <span class="r-kind">{u.essay}</span>
+                  <span class="r-year">{year(w.date)}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {preview && (
+          <figure class="preview">
+            <img src={preview.image} alt={preview.name} width="1200" height="600" />
+          </figure>
+        )}
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="con-h">
+        <h2 id="con-h" class="wrap">{u.contact}</h2>
+        <ul class="drows reveal">
+          <li>
+            <a href={mail}>{b.email}</a>
+            <img class="face" src={b.photo} alt={b.name} width="512" height="512" loading="lazy" />
+          </li>
+          {b.links.map((l) => <li><a href={l.url}>{l.label}</a></li>)}
+          <li>
+            <span>{t(b.location, lang)}</span>
+            <span class="clock" data-tz={b.timezone} data-awake={u.timeAwake} data-asleep={u.timeAsleep}>{u.noScriptTime}</span>
+          </li>
+          <li class="greet"><a href={mail}>{u.greet} <span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="foot-top wrap reveal">
+        <p class="foot-mark">{b.handle}</p>
+        <p class="foot-note">{b.name}. {t(b.title, lang)}. {t(b.location, lang)}.</p>
+        <a href="#top">{u.backToTop}</a>
+      </div>
+      <a class="foot-mail wrap" href={mail}>hi<wbr />@hexrw.com</a>
+      <div class="foot-meta wrap">
+        <span>{b.links.map((l) => <a href={l.url}>{l.label}</a>)}</span>
+        <a href="https://github.com/hexrw/portfolio">{u.source}</a>
+        <span>{t(b.location, lang)}, {new Date().getFullYear()} · <a href={u.otherLang.href} hreflang={other} lang={other}>{u.otherLang.label}</a></span>
+      </div>
+    </footer>
+
+    <script is:inline>
+      // Entrances: each .reveal staggers its children once it scrolls into view.
+      const io = new IntersectionObserver((es) => es.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      }), { rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('.reveal').forEach((el) => {
+        [...el.children].forEach((c, i) => c.style.setProperty('--i', i));
+        io.observe(el);
+      });
+
+      // Project ledger: the preview follows the hovered or focused row.
+      const pv = document.querySelector('.preview');
+      if (pv) {
+        const img = pv.querySelector('img');
+        const top = () => document.querySelector('.ledger').getBoundingClientRect().top;
+        document.querySelectorAll('.row').forEach((r) => {
+          const show = () => {
+            pv.classList.toggle('off', !r.dataset.img);
+            if (r.dataset.img) { img.src = r.dataset.img; img.alt = r.dataset.alt || r.querySelector('.r-name').textContent; }
+            pv.style.translate = `0 ${r.getBoundingClientRect().top - top()}px`;
+          };
+          r.addEventListener('mouseenter', show);
+          r.addEventListener('focusin', show);
+        });
+        const first = document.querySelector('.row[data-img]');
+        if (first) pv.style.translate = `0 ${first.getBoundingClientRect().top - top()}px`;
+      }
+
+      // The live thing: my local time, and whether I'm likely awake.
+      const c = document.querySelector('.clock');
+      if (c) {
+        const tick = () => {
+          const d = new Date();
+          const time = d.toLocaleTimeString(document.documentElement.lang, { hour: '2-digit', minute: '2-digit', timeZone: c.dataset.tz });
+          const h = Number(d.toLocaleString('en-GB', { hour: '2-digit', hour12: false, timeZone: c.dataset.tz }));
+          c.textContent = (h >= 8 && h < 22 ? c.dataset.awake : c.dataset.asleep).replace('{time}', time);
+        };
+        tick();
+        setInterval(tick, 30000);
+      }
+    </script>
+  </body>
+</html>

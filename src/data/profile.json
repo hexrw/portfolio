@@ -1,0 +1,313 @@
+{
+  "basics": {
+    "name": "Petr Kolonicz",
+    "handle": "hexrw",
+    "title": {
+      "en": "Full-Stack Software Engineer",
+      "cs": "Full-stack softwarový inženýr"
+    },
+    "location": {
+      "en": "Czech Republic",
+      "cs": "Česká republika"
+    },
+    "timezone": "Europe/Prague",
+    "email": "hi@hexrw.com",
+    "website": "https://hexrw.com",
+    "photo": "/img/petr.jpg",
+    "lead": {
+      "en": "Web apps in Vue and TypeScript, and the AWS, Cloudflare and Linux infrastructure under them.",
+      "cs": "Webové aplikace ve Vue a TypeScriptu a pod nimi infrastruktura na AWS, Cloudflare a Linuxu."
+    },
+    "summary": {
+      "en": "I build web apps in Vue and TypeScript and run the AWS, Cloudflare and Linux infrastructure they need. Former CTO of an e-commerce analytics startup.",
+      "cs": "Stavím webové aplikace ve Vue a TypeScriptu a provozuji infrastrukturu na AWS, Cloudflare a Linuxu, kterou potřebují. Dříve CTO startupu s analytickým softwarem pro e-commerce."
+    },
+    "about": {
+      "en": "I started building websites ==at 14== and never really stopped. Today I work across the whole stack: interfaces in ==Vue, React and TypeScript==, back ends in Node.js, and serverless infrastructure on ==AWS and Cloudflare==. I set up and run my own Linux servers, and I like knowing what happens all the way down. From 2023 to 2025 I was ==CTO of Wecker==, a startup making analytics software for e-commerce, where I led development, designed the architecture and the product, and ran the cloud side. As a contractor I have built and advised on multi-vendor marketplace platforms. I also run ==Webspen==, a small web studio, and work on ==Selin==, an analytics dashboard for Amazon sellers.",
+      "cs": "Weby stavím ==od svých 14 let== a nikdy jsem nepřestal. Dnes pracuji napříč celým stackem: rozhraní ve ==Vue, Reactu a TypeScriptu==, backend v Node.js a serverless infrastruktura na ==AWS a Cloudflare==. Vlastní linuxové servery si nastavuji a spravuji sám a baví mě vědět, co se děje až úplně dole. V letech 2023 až 2025 jsem byl ==CTO ve Weckeru==, startupu s analytickým softwarem pro e-commerce, kde jsem vedl vývoj, navrhl architekturu i produkt a staral se o cloud. Jako kontraktor jsem stavěl a konzultoval multi-vendor marketplace platformy. Vedle toho vedu ==Webspen==, malé webové studio, a pracuji na ==Selinu==, analytickém dashboardu pro prodejce na Amazonu."
+    },
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/kolonicz"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/hexrw"
+      },
+      {
+        "label": "Medium",
+        "url": "https://medium.com/@kolonicz"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "Bulkitrade, Inc.",
+      "role": {
+        "en": "Developer consultant",
+        "cs": "Vývojářský konzultant"
+      },
+      "what": {
+        "en": "Marketplace platform",
+        "cs": "Marketplace platforma"
+      },
+      "summary": {
+        "en": "Consulting for a company that runs its own multi-vendor marketplace platform.",
+        "cs": "Konzultace pro firmu, která provozuje vlastní multi-vendor marketplace platformu."
+      },
+      "start": "2025-10",
+      "end": "2025-12"
+    },
+    {
+      "company": "Material Index Ltd",
+      "role": {
+        "en": "Software engineer, contract",
+        "cs": "Softwarový inženýr, kontrakt"
+      },
+      "what": {
+        "en": "Marketplace platform",
+        "cs": "Marketplace platforma"
+      },
+      "summary": {
+        "en": "Built a multi-vendor marketplace platform for a London company.",
+        "cs": "Vývoj multi-vendor marketplace platformy pro londýnskou firmu."
+      },
+      "start": "2025-09",
+      "end": "2025-11"
+    },
+    {
+      "company": "Wecker",
+      "role": {
+        "en": "CTO",
+        "cs": "CTO"
+      },
+      "what": {
+        "en": "E-commerce analytics",
+        "cs": "Analytika pro e-commerce"
+      },
+      "summary": {
+        "en": "Lead developer, architect, designer and cloud engineer at a startup making analytics software for e-commerce.",
+        "cs": "Hlavní vývojář, architekt, designér a cloudový inženýr ve startupu s analytickým softwarem pro e-commerce."
+      },
+      "start": "2023-01",
+      "end": "2025-12"
+    },
+    {
+      "company": {
+        "en": "Freelance",
+        "cs": "Na volné noze"
+      },
+      "role": {
+        "en": "Web developer",
+        "cs": "Webový vývojář"
+      },
+      "what": {
+        "en": "Web, brand, SEO",
+        "cs": "Web, značka, SEO"
+      },
+      "summary": {
+        "en": "Project-based work: complete web apps, brand identity, graphic design and SEO.",
+        "cs": "Práce na projektech: kompletní webové aplikace, identita značky, grafický design a SEO."
+      },
+      "start": "2022-09",
+      "end": "2025-05"
+    },
+    {
+      "company": "JaSi PC",
+      "role": {
+        "en": "IT technician",
+        "cs": "IT technik"
+      },
+      "what": {
+        "en": "Servers, CCTV, payments",
+        "cs": "Servery, kamery, platby"
+      },
+      "summary": {
+        "en": "Ran servers and the infrastructure for CCTV and payment systems; built simple websites.",
+        "cs": "Správa serverů a infrastruktury kamerových a platebních systémů, tvorba jednoduchých webů."
+      },
+      "start": "2020-01",
+      "end": "2021-09"
+    }
+  ],
+  "ventures": [
+    {
+      "name": "Webspen",
+      "url": "https://webspen.com",
+      "kind": {
+        "en": "Web studio",
+        "cs": "Webové studio"
+      },
+      "summary": {
+        "en": "Builds websites and web apps for clients, then hosts and looks after them.",
+        "cs": "Staví weby a webové aplikace pro klienty a pak je hostuje a stará se o ně."
+      },
+      "image": "/img/webspen.jpg"
+    },
+    {
+      "name": "Selin",
+      "url": "https://selinapp.com",
+      "kind": {
+        "en": "Seller analytics",
+        "cs": "Analytika pro prodejce"
+      },
+      "summary": {
+        "en": "An analytics dashboard for Amazon sellers in Europe: profit, orders, returns and FBA stock in one place.",
+        "cs": "Analytický dashboard pro prodejce na Amazonu v Evropě: zisk, objednávky, vratky a FBA zásoby na jednom místě."
+      },
+      "image": "/img/selinapp.jpg"
+    }
+  ],
+  "projects": [
+    {
+      "name": "mailgrep",
+      "url": "https://github.com/hexrw/mailgrep",
+      "summary": {
+        "en": "Read-only search for the Apple Mail store on macOS",
+        "cs": "Vyhledávání v úložišti Apple Mail na macOS, jen pro čtení"
+      },
+      "stack": [
+        "Python"
+      ],
+      "year": 2026,
+      "image": "/img/gh-mailgrep.png"
+    },
+    {
+      "name": "cloudlogs",
+      "url": "https://github.com/hexrw/cloudlogs",
+      "summary": {
+        "en": "A better way to watch AWS infrastructure logs",
+        "cs": "Lepší sledování logů infrastruktury na AWS"
+      },
+      "stack": [
+        "TypeScript",
+        "AWS"
+      ],
+      "year": 2026,
+      "image": "/img/gh-cloudlogs.png"
+    },
+    {
+      "name": "unocss-preset-primeui",
+      "url": "https://github.com/hexrw/unocss-preset-primeui",
+      "summary": {
+        "en": "UnoCSS preset for PrimeVue's Volt components",
+        "cs": "UnoCSS preset pro komponenty Volt z PrimeVue"
+      },
+      "stack": [
+        "TypeScript",
+        "Vue"
+      ],
+      "year": 2026,
+      "image": "/img/gh-unocss-preset-primeui.png"
+    },
+    {
+      "name": "dmotd",
+      "url": "https://github.com/hexrw/dmotd",
+      "summary": {
+        "en": "A friendlier login screen for Linux servers",
+        "cs": "Přívětivější přihlašovací obrazovka pro linuxové servery"
+      },
+      "stack": [
+        "Shell",
+        "Linux"
+      ],
+      "year": 2023,
+      "image": "/img/gh-dmotd.png"
+    },
+    {
+      "name": "qlevens",
+      "url": "https://github.com/hexrw/qlevens",
+      "summary": {
+        "en": "Levenshtein distance compiled to WebAssembly",
+        "cs": "Levenshteinova vzdálenost zkompilovaná do WebAssembly"
+      },
+      "stack": [
+        "AssemblyScript",
+        "WebAssembly"
+      ],
+      "year": 2022,
+      "image": "/img/gh-qlevens.png"
+    }
+  ],
+  "writing": [
+    {
+      "title": "The Gardener: A Plausible Take on Humane Superintelligence",
+      "url": "https://medium.com/@kolonicz/the-ai-gardener-a-plausible-take-on-humane-superintelligence-5f5904413b35",
+      "date": "2025-07",
+      "image": "/img/medium-gardener.jpg"
+    },
+    {
+      "title": "ASI, Motivation and State of Being",
+      "url": "https://medium.com/@kolonicz/asi-motivation-and-state-of-being-a9808389b865",
+      "date": "2025-07"
+    },
+    {
+      "title": "A few words for emerging developers",
+      "url": "https://medium.com/@kolonicz/a-few-words-for-emerging-web-developers-b82f320b9e41",
+      "date": "2025-07"
+    }
+  ],
+  "skills": [
+    {
+      "group": {
+        "en": "Front end",
+        "cs": "Frontend"
+      },
+      "items": [
+        "Vue",
+        "React",
+        "TypeScript",
+        "Astro",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "group": {
+        "en": "Back end",
+        "cs": "Backend"
+      },
+      "items": [
+        "Node.js",
+        "Python",
+        "PostgreSQL",
+        "Redis"
+      ]
+    },
+    {
+      "group": {
+        "en": "Infrastructure",
+        "cs": "Infrastruktura"
+      },
+      "items": [
+        "AWS serverless",
+        "Cloudflare",
+        "Linux",
+        "Docker",
+        "Nginx"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": {
+        "en": "Czech",
+        "cs": "Čeština"
+      },
+      "level": {
+        "en": "Native",
+        "cs": "Rodilý mluvčí"
+      }
+    },
+    {
+      "name": {
+        "en": "English",
+        "cs": "Angličtina"
+      },
+      "level": {
+        "en": "C1",
+        "cs": "C1"
+      }
+    }
+  ]
+}

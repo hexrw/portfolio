@@ -1,0 +1,22 @@
+{
+  "name": "hexrw-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "cv": "node scripts/build-cv.mjs",
+    "build": "node scripts/build-cv.mjs && astro build",
+    "preview": "astro preview",
+    "deploy": "pnpm build && wrangler deploy"
+  },
+  "dependencies": {
+    "@fontsource-variable/libre-franklin": "^5.3.0",
+    "@fontsource-variable/source-serif-4": "^5.3.1",
+    "@myriaddreamin/typst-ts-node-compiler": "^0.7.0",
+    "astro": "^7.4.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.151.3"
+  },
+  "packageManager": "pnpm@10.33.0"
+}
