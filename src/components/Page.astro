@@ -99,7 +99,7 @@ const mail = `mailto:${b.email}`;
               <a class="frame" href={w.url} tabindex="-1">
                 <img src={w.image} alt={`${w.name}, ${new URL(w.url).host}`} width="1440" height="900" loading="lazy" />
               </a>
-              <figcaption>{t(w.summary, lang)}{w.role && <span class="w-role"> {t(w.role, lang)}.</span>}</figcaption>
+              <figcaption>{t(w.summary, lang)}{w.role && <span class="w-role">{t(w.role, lang)}</span>}</figcaption>
             </figure>
           ))}
         </div>
