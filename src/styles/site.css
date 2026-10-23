@@ -117,23 +117,18 @@ a.hl-cta:hover { color: var(--accent-ink); text-decoration: underline; }
 .lineup th { white-space: nowrap; }
 .lineup .when { padding-right: 0; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--muted); }
 
-/* Ventures: two names set large, cut by the section's bottom edge */
-.ventures { padding-top: var(--gap-sec); }
-.ven-top { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: start; }
-.ven-top h2 { grid-column: 1 / 7; font-size: var(--step-lead); }
-.ven-top p { grid-column: 7 / 13; max-width: 46ch; }
-.specimens { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 10vh; padding-bottom: clamp(32px, 4vw, 56px); }
-.spec { text-decoration: none; }
-.spec-word { font: 700 var(--step-xl) / 0.8 var(--display); letter-spacing: -0.045em; transition: color 0.25s; }
-.spec:hover .spec-word { color: var(--accent); }
-
-/* The two real screenshots, big, right under their names */
-.shots { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.shots figure { display: grid; gap: 14px; align-content: start; }
-.frame { display: block; overflow: hidden; aspect-ratio: 1440 / 1000; background: var(--surface); }
+/* Work: each name sits on its own screenshot, two per row */
+.work { padding-top: var(--gap-sec); }
+.work > h2 { font-size: var(--step-lead); margin-bottom: 1.2em; }
+.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(56px, 7vw, 112px) 24px; }
+.work figure { display: grid; gap: 18px; align-content: start; }
+.work h3 { font-size: var(--step-head); letter-spacing: -0.04em; line-height: 0.95; }
+.work h3 a { text-decoration: none; }
+.frame { display: block; overflow: hidden; aspect-ratio: 16 / 10; background: var(--surface); }
 .frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; animation: drift 26s ease-in-out infinite alternate; }
 @keyframes drift { to { scale: 1.06; translate: 0 -2%; } }
-.shots figcaption { max-width: 52ch; }
+.work figcaption { max-width: 52ch; }
+.w-role { color: var(--muted); }
 
 /* Projects: a quiet ledger with a preview that follows the row */
 .projects { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 80px); padding-top: var(--gap-sec); }
@@ -234,13 +229,7 @@ a.hl-cta:hover { color: var(--accent-ink); text-decoration: underline; }
   a.hl-cta { display: block; padding: 0.5em 0.4em; }
 
 
-  .ven-top { grid-template-columns: 1fr; gap: 16px; }
-  .ven-top h2, .ven-top p { grid-column: 1; }
-  .specimens { grid-template-columns: 1fr; height: auto; gap: 0; margin-top: 40px; }
-  .spec { display: block; padding: 20px var(--m) 12px; margin-inline: calc(var(--m) * -1); }
-  .spec + .spec { background: var(--accent); color: var(--accent-ink); }
-  .spec + .spec:hover .spec-word { color: var(--accent-ink); }
-  .shots { grid-template-columns: 1fr; gap: 40px; padding-top: 40px; }
+  .work-grid { grid-template-columns: 1fr; gap: 96px; }
   .lineup tr { grid-template-columns: 1fr auto; }
   .lineup .role-c { grid-column: 1; }
   .lineup .when { grid-column: 2; }

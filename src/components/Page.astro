@@ -45,6 +45,7 @@ const mail = `mailto:${b.email}`;
         <a class="wordmark" href={home}>{b.handle}</a>
         <nav class="top-links" aria-label={u.menu}>
           <a href="#experience">{u.nav.experience}</a>
+          <a href="#work">{u.work}</a>
           <a href="#projects">{u.nav.projects}</a>
           <a href="#contact">{u.nav.contact}</a>
           <a href={u.otherLang.href} hreflang={other} lang={other}>{u.otherLang.label}</a>
@@ -89,30 +90,20 @@ const mail = `mailto:${b.email}`;
         </div>
       </section>
 
-      <section class="ventures wrap" id="ventures" aria-labelledby="ven-h">
-        <div class="ven-top reveal">
-          <h2 id="ven-h">{u.ventures}</h2>
-          <p>{u.venturesIntro}</p>
-        </div>
-        <div class="specimens reveal">
-          {p.ventures.map((v) => (
-            <a class="spec" href={v.url}>
-              <span class="spec-word">{v.name}</span>
-            </a>
+      <section class="work wrap" id="work" aria-labelledby="work-h">
+        <h2 id="work-h">{u.work}</h2>
+        <div class="work-grid">
+          {p.work.map((w) => (
+            <figure class="reveal">
+              <h3><a href={w.url}>{w.name}</a></h3>
+              <a class="frame" href={w.url} tabindex="-1">
+                <img src={w.image} alt={`${w.name}, ${new URL(w.url).host}`} width="1440" height="900" loading="lazy" />
+              </a>
+              <figcaption>{t(w.summary, lang)}{w.role && <span class="w-role"> {t(w.role, lang)}.</span>}</figcaption>
+            </figure>
           ))}
         </div>
       </section>
-
-      <div class="shots wrap reveal">
-        {p.ventures.map((v) => (
-          <figure>
-            <a class="frame" href={v.url} tabindex="-1">
-              <img src={v.image} alt={`${v.name}, ${new URL(v.url).host}`} width="1440" height="1000" loading="lazy" />
-            </a>
-            <figcaption><strong>{v.name}.</strong> {t(v.summary, lang)}</figcaption>
-          </figure>
-        ))}
-      </div>
 
       <section class="projects wrap" id="projects" aria-labelledby="proj-h">
         <div class="ledger reveal">

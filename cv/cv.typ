@@ -5,8 +5,8 @@
 #let t(v) = if type(v) == str { v } else { v.at(lang) }
 
 #let labels = (
-  en: (experience: "Experience", ventures: "Ventures", projects: "Selected projects", skills: "Skills", languages: "Languages", now: "now"),
-  cs: (experience: "Zkušenosti", ventures: "Vlastní firmy", projects: "Vybrané projekty", skills: "Dovednosti", languages: "Jazyky", now: "dosud"),
+  en: (experience: "Experience", work: "Portfolio", projects: "Selected projects", skills: "Skills", languages: "Languages", now: "now"),
+  cs: (experience: "Zkušenosti", work: "Portfolio", projects: "Vybrané projekty", skills: "Dovednosti", languages: "Jazyky", now: "dosud"),
 ).at(lang)
 #let months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 // Czech uses 10/2025 like the site; English uses Oct 2025.
@@ -61,9 +61,9 @@
   ]
 }
 
-#section(labels.ventures)
-#for x in data.ventures [
-  #display(x.name) · #t(x.kind) · #link(x.url)[#bare(x.url)] \
+#section(labels.work)
+#for x in data.work [
+  #display(x.name) · #link(x.url)[#bare(x.url)] \
   #text(size: 9.5pt, t(x.summary))
   #v(2pt)
 ]

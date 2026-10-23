@@ -131,14 +131,10 @@
       "end": "2021-09"
     }
   ],
-  "ventures": [
+  "work": [
     {
       "name": "Webspen",
       "url": "https://webspen.com",
-      "kind": {
-        "en": "Web studio",
-        "cs": "Webové studio"
-      },
       "summary": {
         "en": "Builds websites and web apps for clients, then hosts and looks after them.",
         "cs": "Staví weby a webové aplikace pro klienty a pak je hostuje a stará se o ně."
@@ -148,15 +144,37 @@
     {
       "name": "Selin",
       "url": "https://selinapp.com",
-      "kind": {
-        "en": "Seller analytics",
-        "cs": "Analytika pro prodejce"
-      },
       "summary": {
         "en": "An analytics dashboard for Amazon sellers in Europe: profit, orders, returns and FBA stock in one place.",
         "cs": "Analytický dashboard pro prodejce na Amazonu v Evropě: zisk, objednávky, vratky a FBA zásoby na jednom místě."
       },
       "image": "/img/selinapp.jpg"
+    },
+    {
+      "name": "Bulkitrade",
+      "url": "https://bulkitrade.com",
+      "summary": {
+        "en": "B2B marketplace connecting food and beverage buyers with verified suppliers.",
+        "cs": "B2B marketplace, který propojuje kupce potravin a nápojů s ověřenými dodavateli."
+      },
+      "role": {
+        "en": "Developer consultant, 2025",
+        "cs": "Vývojářský konzultant, 2025"
+      },
+      "image": "/img/bulkitrade.jpg"
+    },
+    {
+      "name": "Material Index",
+      "url": "https://materialindex.com",
+      "summary": {
+        "en": "A platform for reusing building materials: pre-deconstruction audits and a materials marketplace.",
+        "cs": "Platforma pro opětovné využití stavebních materiálů: audity před demolicí a marketplace s materiály."
+      },
+      "role": {
+        "en": "Software engineer, contract, 2025",
+        "cs": "Softwarový inženýr, kontrakt, 2025"
+      },
+      "image": "/img/materialindex.jpg"
     }
   ],
   "projects": [
@@ -188,6 +206,19 @@
       "image": "/img/gh-cloudlogs.png"
     },
     {
+      "name": "search-aggregator",
+      "url": "https://github.com/hexrw/search-aggregator",
+      "summary": {
+        "en": "Search across several sources at once",
+        "cs": "Vyhledávání napříč několika zdroji najednou"
+      },
+      "stack": [
+        "TypeScript"
+      ],
+      "year": 2026,
+      "image": "/img/gh-search-aggregator.png"
+    },
+    {
       "name": "unocss-preset-primeui",
       "url": "https://github.com/hexrw/unocss-preset-primeui",
       "summary": {
@@ -202,6 +233,19 @@
       "image": "/img/gh-unocss-preset-primeui.png"
     },
     {
+      "name": "sb-auth",
+      "url": "https://github.com/hexrw/sb-auth",
+      "summary": {
+        "en": "Community auth components for Supabase",
+        "cs": "Komunitní komponenty pro přihlašování přes Supabase"
+      },
+      "stack": [
+        "TypeScript",
+        "Supabase"
+      ],
+      "year": 2025
+    },
+    {
       "name": "dmotd",
       "url": "https://github.com/hexrw/dmotd",
       "summary": {
@@ -214,6 +258,19 @@
       ],
       "year": 2023,
       "image": "/img/gh-dmotd.png"
+    },
+    {
+      "name": "dffmpeg",
+      "url": "https://github.com/hexrw/dffmpeg",
+      "summary": {
+        "en": "A simple ffmpeg wrapper for Deno",
+        "cs": "Jednoduchý wrapper ffmpeg pro Deno"
+      },
+      "stack": [
+        "TypeScript",
+        "Deno"
+      ],
+      "year": 2023
     },
     {
       "name": "qlevens",

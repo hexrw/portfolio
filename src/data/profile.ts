@@ -26,7 +26,7 @@ const schema = z.strictObject({
     links: z.array(z.strictObject({ label: z.string(), url: z.url() })),
   }),
   experience: z.array(z.strictObject({ company: LorS, role: L, what: L, summary: L, start: month, end: month.nullable() })),
-  ventures: z.array(z.strictObject({ name: z.string(), url: z.url(), kind: L, summary: L, image: z.string() })),
+  work: z.array(z.strictObject({ name: z.string(), url: z.url(), summary: L, role: L.optional(), image: z.string() })),
   projects: z.array(z.strictObject({ name: z.string(), url: z.url(), summary: L, stack: z.array(z.string()), year: z.number().int(), image: z.string().optional() })),
   writing: z.array(z.strictObject({ title: z.string(), url: z.url(), date: month, image: z.string().optional() })),
   skills: z.array(z.strictObject({ group: L, items: z.array(z.string()) })),

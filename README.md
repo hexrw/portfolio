@@ -19,4 +19,4 @@ The schema in `src/data/profile.ts` is strict: an unknown field (for example `ph
 
 ## Deploy
 
-Every push to `main` builds and deploys through `.github/workflows/deploy.yml`. It needs a `CLOUDFLARE_API_TOKEN` repository secret with **Workers Scripts: Edit** on the webspen account and **Workers Routes: Edit** on the hexrw.com zone.
+Cloudflare Workers Builds deploys every push to `main` (Worker `hexrw-portfolio`, build command `pnpm build`, deploy command `npx wrangler deploy`). `pnpm deploy` deploys from a local machine.
