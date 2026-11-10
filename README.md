@@ -12,11 +12,11 @@ The schema in `src/data/profile.ts` is strict: an unknown field (for example `ph
 
 | Command | What it does |
 | --- | --- |
-| `pnpm dev` | Local dev server |
-| `pnpm cv` | Builds `public/cv-en.pdf` and `public/cv-cs.pdf` from `cv/cv.typ` (Typst) |
-| `pnpm build` | CV PDFs plus the static site in `dist/` |
-| `pnpm deploy` | Build and deploy to Cloudflare Workers |
+| `bun dev` | Local dev server |
+| `bun run cv` | Builds `public/cv-en.pdf` and `public/cv-cs.pdf` from `cv/cv.typ` (Typst) |
+| `bun run build` | CV PDFs plus the static site in `dist/` |
+| `bun run deploy` | Build and deploy to Cloudflare Workers |
 
 ## Deploy
 
-Cloudflare Workers Builds deploys every push to `main` (Worker `hexrw-portfolio`, build command `pnpm build`, deploy command `npx wrangler deploy`). `pnpm deploy` deploys from a local machine.
+Cloudflare Workers Builds deploys every push to `main` (Worker `hexrw-portfolio`, build command `bun run build`, deploy command `npx wrangler deploy`). `bun run deploy` deploys from a local machine.

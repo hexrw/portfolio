@@ -16,7 +16,7 @@
 
 #let ink = rgb("#2a1d17")
 #let muted = rgb("#6b5b51")
-#let accent = rgb("#456f3a")
+#let accent = rgb("#426b37")
 
 #set document(title: b.name + " CV", author: b.name)
 #set page(paper: "a4", margin: (x: 18mm, y: 16mm))

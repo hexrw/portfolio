@@ -3,7 +3,7 @@
   "name": "hexrw-portfolio",
   "account_id": "62a145acbf46062b9978a9f21ca433f4",
   "compatibility_date": "2026-10-01",
-  "assets": { "directory": "./dist" },
+  "assets": { "directory": "./dist", "not_found_handling": "404-page" },
   "workers_dev": false,
   "routes": [
     { "pattern": "hexrw.com", "custom_domain": true },

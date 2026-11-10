@@ -33,7 +33,7 @@ export const ui = {
     projects: 'Projekty a texty',
     openSource: 'Open source',
     writing: 'Texty',
-    essay: 'Esej na Medium',
+    essay: 'Esej na Mediu',
     contact: 'Kontakt',
     timeAwake: 'U mě je {time}, nejspíš odpovím ještě dnes.',
     timeAsleep: 'U mě je {time}. Odpovím ráno.',

@@ -20,7 +20,7 @@
     },
     "summary": {
       "en": "I build web apps in Vue and TypeScript and run the AWS, Cloudflare and Linux infrastructure they need. Former CTO of an e-commerce analytics startup.",
-      "cs": "Stavím webové aplikace ve Vue a TypeScriptu a provozuji infrastrukturu na AWS, Cloudflare a Linuxu, kterou potřebují. Dříve CTO startupu s analytickým softwarem pro e-commerce."
+      "cs": "Stavím webové aplikace ve Vue a TypeScriptu a provozuji infrastrukturu, kterou potřebují, na AWS, Cloudflare a Linuxu. Dříve CTO startupu s analytickým softwarem pro e-commerce."
     },
     "about": {
       "en": "I started building websites ==at 14== and never really stopped. Today I work across the whole stack: interfaces in ==Vue, React and TypeScript==, back ends in Node.js, and serverless infrastructure on ==AWS and Cloudflare==. I set up and run my own Linux servers, and I like knowing what happens all the way down. From 2023 to 2025 I was ==CTO of Wecker==, a startup making analytics software for e-commerce, where I led development, designed the architecture and the product, and ran the cloud side. As a contractor I have built and advised on multi-vendor marketplace platforms. I also run ==Webspen==, a small web studio.",
@@ -243,7 +243,8 @@
         "TypeScript",
         "Supabase"
       ],
-      "year": 2025
+      "year": 2025,
+      "image": "/img/gh-sb-auth.png"
     },
     {
       "name": "dmotd",
@@ -270,7 +271,8 @@
         "TypeScript",
         "Deno"
       ],
-      "year": 2023
+      "year": 2023,
+      "image": "/img/gh-dffmpeg.png"
     },
     {
       "name": "qlevens",
@@ -353,7 +355,7 @@
       },
       "level": {
         "en": "Native",
-        "cs": "Rodilý mluvčí"
+        "cs": "rodilý mluvčí"
       }
     },
     {

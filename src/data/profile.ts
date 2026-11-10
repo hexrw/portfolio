@@ -36,7 +36,11 @@ const schema = z.strictObject({
 export const profile = schema.parse(raw);
 
 // Czech typesetting keeps one-letter prepositions and conjunctions (v, a, k...) with the next word.
-const nbsp = (s: string, lang: Lang) => (lang === 'cs' ? s.replace(/(^|\s)([ksvzouaiKSVZOUAI]) /g, '$1$2\u00a0') : s);
+// "e-commerce" gets a non-breaking hyphen so it never splits across lines.
+const nbsp = (s: string, lang: Lang) => {
+  s = s.replace(/([eE])-commerce/g, '$1\u2011commerce');
+  return lang === 'cs' ? s.replace(/(^|\s)([ksvzouaiKSVZOUAI]) /g, '$1$2\u00a0') : s;
+};
 export const t = (v: string | { en: string; cs: string }, lang: Lang) => nbsp(typeof v === 'string' ? v : v[lang], lang);
 
 const ym = (s: string) => new Date(`${s}-01T00:00:00Z`);

@@ -1,0 +1,36 @@
+---
+import '@fontsource-variable/libre-franklin';
+import '@fontsource-variable/source-serif-4';
+import '../styles/site.css';
+import { profile } from '../data/profile';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex" />
+    <title>Page not found · {profile.basics.name}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <main class="hero" id="top">
+      <div class="hero-top wrap">
+        <a class="wordmark" href="/">{profile.basics.handle}</a>
+        <nav class="top-links" aria-label="Menu">
+          <a href="/#work">Work</a>
+          <a href="/#projects">Projects</a>
+          <a href="/#contact">Contact</a>
+          <a href="/cs/" hreflang="cs" lang="cs">Česky</a>
+        </nav>
+      </div>
+      <div class="hero-copy wrap">
+        <h1>404, page not found</h1>
+        <p class="lead">This address doesn't exist on hexrw.com.</p>
+        <p class="lead" lang="cs">Tahle stránka na hexrw.com neexistuje.</p>
+        <a class="btn" href="/">Go to the home page <span aria-hidden="true">→</span></a>
+      </div>
+      <p class="giant" aria-hidden="true">{profile.basics.name.split(' ').at(-1)}</p>
+    </main>
+  </body>
+</html>
